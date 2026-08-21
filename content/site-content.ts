@@ -32,11 +32,6 @@ export const siteContent = {
       featured: true,
     },
     {
-      title: "Sports Massage",
-      short: "Support for active bodies before training, after exertion and throughout injury recovery.",
-      featured: true,
-    },
-    {
       title: "Mobile Massage",
       short: "Personalised therapeutic treatment delivered in the comfort and privacy of your home.",
       featured: true,

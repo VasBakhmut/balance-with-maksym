@@ -19,6 +19,11 @@ const jsonLd = {
 };
 
 const featuredServices = siteContent.services.filter((service) => service.featured);
+const serviceImages = [
+  "/images/maksym/therapeutic-treatment.webp",
+  "/images/maksym/hands-detail.webp",
+  "/images/maksym/clinic-session.webp",
+] as const;
 
 export default function HomePage() {
   return (
@@ -28,7 +33,7 @@ export default function HomePage() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-frame shell-wide">
-            <Image className="hero-image" src="/images/editorial/hero-treatment.png" alt="Therapeutic massage treatment in a calm Sydney studio" fill priority loading="eager" sizes="100vw" />
+            <Image className="hero-image" src="/images/maksym/hero-treatment.webp" alt="Maksym providing personalised therapeutic massage in Sydney" fill priority loading="eager" sizes="100vw" />
             <div className="hero-shade" />
             <div className="hero-copy">
               <p className="kicker">Therapeutic massage in Sydney</p>
@@ -52,7 +57,7 @@ export default function HomePage() {
           <div className="shell service-orbits" id="treatments">
             {featuredServices.map((service, index) => (
               <article key={service.title} className="service-orbit">
-                <div className="service-photo"><Image src={index % 2 ? "/images/editorial/movement-assessment.png" : "/images/editorial/hero-treatment.png"} alt="" fill sizes="(max-width: 700px) 80vw, 22vw" /></div>
+                <div className="service-photo"><Image src={serviceImages[index]} alt={`${service.title} with Maksym`} fill sizes="(max-width: 700px) 80vw, 30vw" /></div>
                 <span>0{index + 1}</span><h3>{service.title}</h3><p>{service.short}</p>
               </article>
             ))}
@@ -62,8 +67,8 @@ export default function HomePage() {
         <section className="story section" id="approach">
           <div className="shell story-grid">
             <div className="story-collage">
-              <div className="photo-tall"><Image src="/images/editorial/room-preparation.png" alt="Maksym preparing a calm treatment room" fill sizes="(max-width: 800px) 90vw, 40vw" /></div>
-              <div className="photo-small"><Image src="/images/editorial/movement-assessment.png" alt="A personalised movement assessment" fill sizes="(max-width: 800px) 60vw, 24vw" /></div>
+              <div className="photo-tall"><Image src="/images/maksym/therapeutic-treatment.webp" alt="Maksym tailoring hands-on treatment to a client" fill sizes="(max-width: 800px) 90vw, 40vw" /></div>
+              <div className="photo-small"><Image src="/images/maksym/movement-assessment.webp" alt="Maksym assessing a client's movement" fill sizes="(max-width: 800px) 60vw, 24vw" /></div>
             </div>
             <div className="story-copy">
               <p className="kicker">A thoughtful approach</p>
@@ -99,7 +104,7 @@ export default function HomePage() {
 
         <section className="mobile-feature section" id="mobile">
           <div className="shell mobile-panel">
-            <Image src="/images/editorial/room-preparation.png" alt="A treatment space prepared for a mobile massage appointment" fill sizes="100vw" />
+            <Image src="/images/maksym/clinic-session.webp" alt="Maksym providing a therapeutic massage session" fill sizes="100vw" />
             <div className="mobile-overlay" />
             <div className="mobile-copy"><p className="kicker light">Mobile therapeutic massage</p><h2>Professional care,<br /><em>where you feel at home.</em></h2><p>Mobile appointments are available across Sydney, subject to location and availability. Post-stroke support is primarily offered as a home service.</p><a className="button button-light" href="#appointment">Request a mobile visit</a></div>
           </div>
@@ -118,7 +123,7 @@ export default function HomePage() {
         <section className="about section" id="about">
           <div className="shell about-grid">
             <div className="about-copy"><p className="kicker">Balance With Maksym</p><h2>Skilled hands.<br /><em>A calm human approach.</em></h2><p>With more than nine years of professional experience, Maksym creates thoughtful treatment plans around each client’s pain, movement and recovery goals.</p><blockquote>“Every treatment is tailored to the person — not just the symptoms.”</blockquote></div>
-            <div className="about-image"><Image src="/images/editorial/room-preparation.png" alt="Maksym preparing the room before an appointment" fill sizes="(max-width: 800px) 90vw, 45vw" /></div>
+            <div className="about-image"><Image src="/images/maksym/maksym-portrait.webp" alt="Maksym, therapeutic massage therapist in Sydney" fill sizes="(max-width: 800px) 90vw, 45vw" /></div>
           </div>
         </section>
 
