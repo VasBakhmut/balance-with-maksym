@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Manrope, Newsreader } from "next/font/google";
 import { siteContent } from "@/content/site-content";
 import "./globals.css";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteContent.seo.canonical),
@@ -34,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const links = [["Treatments", "#treatments"], ["Approach", "#approach"], ["Mobile", "#mobile"], ["About", "#about"], ["Pricing", "#pricing"]] as const;
+const links = [["Approach", "#approach"], ["Treatments", "#treatments"], ["Mobile", "#mobile"], ["About", "#about"], ["Reviews", "#reviews"], ["Pricing", "#pricing"]] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
