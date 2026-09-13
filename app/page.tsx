@@ -20,6 +20,25 @@ const jsonLd = {
 
 const featuredServices = siteContent.services.filter((service) => service.featured);
 
+const featuredServiceImages = [
+  {
+    src: "/images/maksym-optimized/therapeutic-massage-sydney.webp",
+    alt: "Maksym providing personalised therapeutic massage in Sydney",
+  },
+  {
+    src: "/images/maksym-optimized/targeted-massage-treatment-sydney.webp",
+    alt: "Focused deep tissue massage treatment in Sydney",
+  },
+  {
+    src: "/images/maksym-optimized/cupping-therapy-sydney.webp",
+    alt: "Cupping and red light treatment supporting physical recovery in Sydney",
+  },
+  {
+    src: "/images/editorial/room-preparation.png",
+    alt: "A calm treatment space prepared for a private mobile massage appointment",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -28,7 +47,7 @@ export default function HomePage() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-frame shell-wide">
-            <Image className="hero-image" src="/images/editorial/hero-treatment.png" alt="Therapeutic massage treatment in a calm Sydney studio" fill priority loading="eager" sizes="100vw" />
+            <Image className="hero-image" src="/images/generated/maksym-therapeutic-massage-hero-v1.png" alt="Personalised therapeutic back massage treatment in Sydney" fill priority loading="eager" sizes="100vw" />
             <div className="hero-shade" />
             <div className="hero-copy">
               <p className="kicker">Therapeutic massage in Sydney</p>
@@ -52,18 +71,42 @@ export default function HomePage() {
           <div className="shell service-orbits" id="treatments">
             {featuredServices.map((service, index) => (
               <article key={service.title} className="service-orbit">
-                <div className="service-photo"><Image src={index % 2 ? "/images/editorial/movement-assessment.png" : "/images/editorial/hero-treatment.png"} alt="" fill sizes="(max-width: 700px) 80vw, 22vw" /></div>
+                <div className="service-photo"><Image src={featuredServiceImages[index]?.src ?? featuredServiceImages[0].src} alt={featuredServiceImages[index]?.alt ?? featuredServiceImages[0].alt} fill unoptimized sizes="(max-width: 700px) 80vw, 22vw" /></div>
                 <span>0{index + 1}</span><h3>{service.title}</h3><p>{service.short}</p>
               </article>
             ))}
           </div>
         </section>
 
+        <section className="body-focus section" aria-labelledby="body-focus-title">
+          <div className="shell body-focus-heading">
+            <div>
+              <p className="kicker">Understanding the body</p>
+              <h2 id="body-focus-title">More than massage.<br /><em>Care with a clear purpose.</em></h2>
+            </div>
+            <p>Maksym looks beyond the immediate area of discomfort — considering muscles, movement and nerve-related patterns to shape treatment around what your body needs.</p>
+          </div>
+          <div className="shell body-focus-grid">
+            <article className="body-focus-card">
+              <div className="body-focus-image"><Image src="/images/anatomy/pain-tension-v1.png" alt="Anatomical view of the neck, shoulders and upper-back muscles" fill sizes="(max-width: 700px) 92vw, 31vw" /></div>
+              <div className="body-focus-copy"><span>Muscles</span><h3>Pain &amp; tension</h3><p>Focused care for neck, back and shoulder tension, including discomfort linked with headaches and daily strain.</p></div>
+            </article>
+            <article className="body-focus-card">
+              <div className="body-focus-image"><Image src="/images/anatomy/posture-movement-v1.png" alt="Human skeleton showing posture and spinal alignment" fill sizes="(max-width: 700px) 92vw, 31vw" /></div>
+              <div className="body-focus-copy"><span>Movement</span><h3>Mobility &amp; posture</h3><p>Treatment shaped around stiffness, restricted movement and postural tension from work, training or everyday life.</p></div>
+            </article>
+            <article className="body-focus-card">
+              <div className="body-focus-image"><Image src="/images/anatomy/nerve-pain-v1.png" alt="Anatomical view of the lower spine, pelvis and sciatic nerve" fill sizes="(max-width: 700px) 92vw, 31vw" /></div>
+              <div className="body-focus-copy"><span>Nervous system</span><h3>Nerve pain &amp; recovery</h3><p>A considered approach for sciatica, nerve-related discomfort and restoring more comfortable movement.</p></div>
+            </article>
+          </div>
+        </section>
+
         <section className="story section" id="approach">
           <div className="shell story-grid">
             <div className="story-collage">
-              <div className="photo-tall"><Image src="/images/editorial/room-preparation.png" alt="Maksym preparing a calm treatment room" fill sizes="(max-width: 800px) 90vw, 40vw" /></div>
-              <div className="photo-small"><Image src="/images/editorial/movement-assessment.png" alt="A personalised movement assessment" fill sizes="(max-width: 800px) 60vw, 24vw" /></div>
+              <div className="photo-tall"><Image src="/images/maksym-optimized/red-light-therapy-sydney.webp" alt="Maksym providing personalised red light therapy as part of a treatment session" fill unoptimized sizes="(max-width: 800px) 90vw, 40vw" /></div>
+              <div className="photo-small"><Image src="/images/maksym-optimized/therapeutic-massage-sydney.webp" alt="Maksym providing focused hands-on therapeutic treatment" fill unoptimized sizes="(max-width: 800px) 60vw, 24vw" /></div>
             </div>
             <div className="story-copy">
               <p className="kicker">A thoughtful approach</p>
@@ -99,7 +142,7 @@ export default function HomePage() {
 
         <section className="mobile-feature section" id="mobile">
           <div className="shell mobile-panel">
-            <Image src="/images/editorial/room-preparation.png" alt="A treatment space prepared for a mobile massage appointment" fill sizes="100vw" />
+            <Image src="/images/editorial/room-preparation.png" alt="A calm treatment space prepared for a private mobile massage appointment" fill unoptimized sizes="100vw" />
             <div className="mobile-overlay" />
             <div className="mobile-copy"><p className="kicker light">Mobile therapeutic massage</p><h2>Professional care,<br /><em>where you feel at home.</em></h2><p>Mobile appointments are available across Sydney, subject to location and availability. Post-stroke support is primarily offered as a home service.</p><a className="button button-light" href="#appointment">Request a mobile visit</a></div>
           </div>
@@ -118,7 +161,7 @@ export default function HomePage() {
         <section className="about section" id="about">
           <div className="shell about-grid">
             <div className="about-copy"><p className="kicker">Balance With Maksym</p><h2>Skilled hands.<br /><em>A calm human approach.</em></h2><p>With more than nine years of professional experience, Maksym creates thoughtful treatment plans around each client’s pain, movement and recovery goals.</p><blockquote>“Every treatment is tailored to the person — not just the symptoms.”</blockquote></div>
-            <div className="about-image"><Image src="/images/editorial/room-preparation.png" alt="Maksym preparing the room before an appointment" fill sizes="(max-width: 800px) 90vw, 45vw" /></div>
+            <div className="about-image"><Image src="/images/maksym-optimized/maksym-massage-therapist-sydney.webp" alt="Maksym, an experienced therapeutic massage therapist in Sydney" fill unoptimized sizes="(max-width: 800px) 90vw, 45vw" /></div>
           </div>
         </section>
 
