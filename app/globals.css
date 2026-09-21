@@ -163,20 +163,8 @@ body{background:#fff}
 /* Show more of the portrait on phones while trimming only the ceiling strip. */
 @media(max-width:600px){.about-image{min-height:440px}.about-image img{object-position:center 45%}}
 
-/* Five distinct treatments: the final home-care card completes the mobile grid. */
+/* Six treatments remain fully visible at each breakpoint. */
 @media(min-width:901px){
-  .service-orbits{grid-template-columns:repeat(6,minmax(0,1fr));gap:40px 24px}
-  .service-orbit{grid-column:span 2}
-  .service-orbit:nth-last-child(2){grid-column:2/span 2}
-  .service-orbit:last-child{grid-column:4/span 2}
+  .service-orbits{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px}
   .service-orbit:nth-child(even){padding-top:0}
-}
-@media(min-width:601px) and (max-width:900px){
-  .service-orbit:last-child{grid-column:1/-1;max-width:calc(50% - 12px);justify-self:center}
-}
-@media(max-width:600px){
-  .service-orbit:last-child{grid-column:1/-1}
-  .service-orbit:last-child .service-photo{aspect-ratio:2/1}
-  .service-orbit:last-child .service-photo img{object-position:center 43%}
-  .service-orbit:last-child p{max-width:300px;margin-inline:auto}
 }

@@ -25,8 +25,12 @@ const featuredServiceImages: Record<string, { src: string; alt: string }> = {
     alt: "Maksym providing personalised therapeutic massage in Sydney",
   },
   "Deep Tissue Massage": {
-    src: "/images/maksym-new/deep-tissue-shoulder-treatment-sydney.jpg",
-    alt: "Focused deep tissue treatment around the shoulder in Sydney",
+    src: "/images/maksym-real/deep-tissue-massage-sydney.jpg",
+    alt: "Maksym providing focused deep tissue massage treatment in Sydney",
+  },
+  "Sports Massage": {
+    src: "/images/maksym-new/sports-recovery-massage-sydney.jpg",
+    alt: "Focused shoulder massage supporting sports recovery in Sydney",
   },
   "Red Light Therapy": {
     src: "/images/maksym-new/red-light-therapy-service-sydney.jpg",

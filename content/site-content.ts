@@ -30,6 +30,11 @@ export const siteContent = {
       featured: true,
     },
     {
+      title: "Sports Massage",
+      short: "Support for active bodies before training, after exertion and throughout injury recovery.",
+      featured: true,
+    },
+    {
       title: "Red Light Therapy",
       short: "Light-based treatment offered where appropriate as part of a personalised session.",
       featured: true,
