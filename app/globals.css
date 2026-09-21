@@ -63,7 +63,7 @@ body{background:#fff}
 .hero-image{object-position:right bottom;transform:scale(1.32);transform-origin:right bottom}
 .service-photo img,.photo-small img{object-position:center}
 .photo-tall img{object-position:center 46%}
-.about-image img{object-position:center 34%}
+.about-image img{object-position:center 14%}
 
 @media(max-width:900px){.hero-image{object-position:76% bottom;transform:scale(1.58);transform-origin:76% bottom}}
 @media(max-width:600px){.hero-image{object-position:73% bottom;transform:scale(1.9);transform-origin:73% bottom}}

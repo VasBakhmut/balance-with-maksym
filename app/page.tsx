@@ -22,20 +22,20 @@ const featuredServices = siteContent.services.filter((service) => service.featur
 
 const featuredServiceImages = [
   {
-    src: "/images/maksym-optimized/therapeutic-massage-sydney.webp",
+    src: "/images/maksym-new/therapeutic-massage-sydney.jpg",
     alt: "Maksym providing personalised therapeutic massage in Sydney",
   },
   {
-    src: "/images/maksym-optimized/targeted-massage-treatment-sydney.webp",
+    src: "/images/maksym-new/deep-tissue-massage-sydney.jpg",
     alt: "Focused deep tissue massage treatment in Sydney",
   },
   {
-    src: "/images/maksym-optimized/cupping-therapy-sydney.webp",
-    alt: "Cupping and red light treatment supporting physical recovery in Sydney",
+    src: "/images/maksym-new/sports-recovery-massage-sydney.jpg",
+    alt: "Focused massage treatment supporting physical recovery in Sydney",
   },
   {
-    src: "/images/editorial/room-preparation.png",
-    alt: "A calm treatment space prepared for a private mobile massage appointment",
+    src: "/images/maksym-new/mobile-therapeutic-massage-sydney.jpg",
+    alt: "A private mobile therapeutic massage appointment in a Sydney home",
   },
 ] as const;
 
@@ -105,8 +105,8 @@ export default function HomePage() {
         <section className="story section" id="approach">
           <div className="shell story-grid">
             <div className="story-collage">
-              <div className="photo-tall"><Image src="/images/maksym-optimized/red-light-therapy-sydney.webp" alt="Maksym providing personalised red light therapy as part of a treatment session" fill unoptimized sizes="(max-width: 800px) 90vw, 40vw" /></div>
-              <div className="photo-small"><Image src="/images/maksym-optimized/therapeutic-massage-sydney.webp" alt="Maksym providing focused hands-on therapeutic treatment" fill unoptimized sizes="(max-width: 800px) 60vw, 24vw" /></div>
+              <div className="photo-tall"><Image src="/images/maksym-new/red-light-therapy-sydney.jpg" alt="Red light therapy used as part of a personalised treatment session" fill unoptimized sizes="(max-width: 800px) 90vw, 40vw" /></div>
+              <div className="photo-small"><Image src="/images/maksym-new/cupping-therapy-sydney.jpg" alt="Maksym providing focused cupping therapy in Sydney" fill unoptimized sizes="(max-width: 800px) 60vw, 24vw" /></div>
             </div>
             <div className="story-copy">
               <p className="kicker">A thoughtful approach</p>
@@ -142,7 +142,7 @@ export default function HomePage() {
 
         <section className="mobile-feature section" id="mobile">
           <div className="shell mobile-panel">
-            <Image src="/images/editorial/room-preparation.png" alt="A calm treatment space prepared for a private mobile massage appointment" fill unoptimized sizes="100vw" />
+            <Image src="/images/maksym-new/mobile-therapeutic-massage-sydney.jpg" alt="Maksym providing mobile therapeutic massage in a private Sydney home" fill unoptimized sizes="100vw" />
             <div className="mobile-overlay" />
             <div className="mobile-copy"><p className="kicker light">Mobile therapeutic massage</p><h2>Professional care,<br /><em>where you feel at home.</em></h2><p>Mobile appointments are available across Sydney, subject to location and availability. Post-stroke support is primarily offered as a home service.</p><a className="button button-light" href="#appointment">Request a mobile visit</a></div>
           </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
         <section className="about section" id="about">
           <div className="shell about-grid">
             <div className="about-copy"><p className="kicker">Balance With Maksym</p><h2>Skilled hands.<br /><em>A calm human approach.</em></h2><p>With more than nine years of professional experience, Maksym creates thoughtful treatment plans around each client’s pain, movement and recovery goals.</p><blockquote>“Every treatment is tailored to the person — not just the symptoms.”</blockquote></div>
-            <div className="about-image"><Image src="/images/maksym-optimized/maksym-massage-therapist-sydney.webp" alt="Maksym, an experienced therapeutic massage therapist in Sydney" fill unoptimized sizes="(max-width: 800px) 90vw, 45vw" /></div>
+            <div className="about-image"><Image src="/images/maksym-new/maksym-therapeutic-massage-therapist-sydney.jpg" alt="Maksym, an experienced therapeutic massage therapist in Sydney" fill unoptimized sizes="(max-width: 800px) 90vw, 45vw" /></div>
           </div>
         </section>
 
