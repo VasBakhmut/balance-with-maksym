@@ -19,24 +19,28 @@ const jsonLd = {
 
 const featuredServices = siteContent.services.filter((service) => service.featured);
 
-const featuredServiceImages = [
-  {
+const featuredServiceImages: Record<string, { src: string; alt: string }> = {
+  "Therapeutic Massage": {
     src: "/images/maksym-new/therapeutic-massage-sydney.jpg",
     alt: "Maksym providing personalised therapeutic massage in Sydney",
   },
-  {
-    src: "/images/maksym-new/deep-tissue-massage-sydney.jpg",
-    alt: "Focused deep tissue massage treatment in Sydney",
+  "Deep Tissue Massage": {
+    src: "/images/maksym-new/deep-tissue-shoulder-treatment-sydney.jpg",
+    alt: "Focused deep tissue treatment around the shoulder in Sydney",
   },
-  {
-    src: "/images/maksym-new/sports-recovery-massage-sydney.jpg",
-    alt: "Focused massage treatment supporting physical recovery in Sydney",
+  "Red Light Therapy": {
+    src: "/images/maksym-new/red-light-therapy-service-sydney.jpg",
+    alt: "Red light therapy lamps positioned over a client's back",
   },
-  {
+  "Dry Needling": {
+    src: "/images/maksym-new/dry-needling-sydney.jpg",
+    alt: "Dry needling treatment using fine needles in a targeted muscle area",
+  },
+  "Mobile Massage": {
     src: "/images/maksym-new/mobile-therapeutic-massage-sydney.jpg",
     alt: "A private mobile therapeutic massage appointment in a Sydney home",
   },
-] as const;
+};
 
 export default function HomePage() {
   return (
@@ -70,7 +74,7 @@ export default function HomePage() {
           <div className="shell service-orbits" id="treatments">
             {featuredServices.map((service, index) => (
               <article key={service.title} className="service-orbit">
-                <div className="service-photo"><Image src={featuredServiceImages[index]?.src ?? featuredServiceImages[0].src} alt={featuredServiceImages[index]?.alt ?? featuredServiceImages[0].alt} fill unoptimized sizes="(max-width: 700px) 80vw, 22vw" /></div>
+                <div className="service-photo"><Image src={featuredServiceImages[service.title].src} alt={featuredServiceImages[service.title].alt} fill unoptimized sizes="(max-width: 600px) 50vw, (max-width: 900px) 45vw, 30vw" /></div>
                 <span>0{index + 1}</span><h3>{service.title}</h3><p>{service.short}</p>
               </article>
             ))}
