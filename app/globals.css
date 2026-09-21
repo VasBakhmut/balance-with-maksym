@@ -159,3 +159,6 @@ body{background:#fff}
   .service-orbit p{font-size:11px}
   .hero-copy h1{font-size:clamp(44px,13vw,55px)}
 }
+
+/* Hide the ceiling strip above Maksym in the mobile portrait crop. */
+@media(max-width:600px){.about-image img{transform:scale(1.05);transform-origin:center bottom}}
