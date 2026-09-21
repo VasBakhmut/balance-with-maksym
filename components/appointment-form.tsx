@@ -51,14 +51,7 @@ export function AppointmentForm() {
         </select>
       </label>
 
-      {type === "clinic" ? (
-        <label>Preferred clinic area<span aria-hidden="true">*</span>
-          <select name="clinic" required defaultValue="">
-            <option value="" disabled>Select a location</option>
-            {siteContent.locations.map(location => <option key={location}>{location}</option>)}
-          </select>
-        </label>
-      ) : (
+      {type === "mobile" && (
         <label>Your suburb<span aria-hidden="true">*</span>
           <input name="suburb" autoComplete="address-level2" required placeholder="e.g. Bondi" />
         </label>

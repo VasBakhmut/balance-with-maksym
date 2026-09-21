@@ -6,12 +6,11 @@ export const siteContent = {
     phoneHref: "tel:+61411918718",
     experienceYears: "9+",
     rating: "5.0",
-    reviewCount: 62,
   },
   seo: {
     title: "Therapeutic Massage Sydney | Balance With Maksym",
     description:
-      "Personalised therapeutic massage in Sydney for pain relief, recovery and better movement. Clinic appointments in Darling Harbour and Kogarah, plus mobile massage across Sydney.",
+      "Personalised therapeutic massage in Sydney for pain relief, recovery and better movement, with clinic appointments and mobile massage across Sydney.",
     canonical: "https://balancewithmaksym.com.au",
   },
   social: {
@@ -19,7 +18,6 @@ export const siteContent = {
     facebook: "https://www.facebook.com/BalanceWithinRemedialMassage",
     google: "https://maps.app.goo.gl/TMK832yNe4G2rJUr9?g_st=ic",
   },
-  locations: ["Darling Harbour", "Kogarah"],
   services: [
     {
       title: "Therapeutic Massage",

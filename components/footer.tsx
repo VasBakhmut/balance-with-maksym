@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <p className="footer-heading">Contact</p>
           <a href={siteContent.business.phoneHref}><Phone />{siteContent.business.phoneDisplay}</a>
-          <p>Clinic appointments in {siteContent.locations.join(" and ")}</p>
+          <p>Clinic appointments available by arrangement</p>
           <p>Mobile service across Sydney</p>
         </div>
         <div>

@@ -13,9 +13,8 @@ const jsonLd = {
   telephone: "+61411918718",
   image: `${siteContent.seo.canonical}/images/balance-with-maksym-logo-transparent.png`,
   description: siteContent.seo.description,
-  areaServed: ["Sydney", ...siteContent.locations],
-  priceRange: "$120–$170+",
-  aggregateRating: { "@type": "AggregateRating", ratingValue: siteContent.business.rating, reviewCount: siteContent.business.reviewCount },
+  areaServed: "Sydney",
+  priceRange: "$130–$200+",
 };
 
 const featuredServices = siteContent.services.filter((service) => service.featured);
@@ -58,7 +57,7 @@ export default function HomePage() {
                 <a className="text-link" href="#treatments">Explore treatments <span>↗</span></a>
               </div>
             </div>
-            <div className="hero-proof"><strong>9+</strong><span>years of<br />experience</span><i /><strong>5.0</strong><span>from 62<br />Google reviews</span></div>
+            <div className="hero-proof"><strong>9+</strong><span>years of<br />experience</span><i /><strong>5.0</strong><span>Google<br />rating</span></div>
           </div>
         </section>
 
@@ -152,8 +151,8 @@ export default function HomePage() {
           <div className="shell pricing-layout">
             <div><p className="kicker">Simple pricing</p><h2>Choose the setting<br /><em>that suits you.</em></h2><p className="section-lead">Select a preferred time. Maksym will contact you personally to confirm the appointment and final details.</p></div>
             <div className="price-list">
-              <article><p>Clinic treatment</p><div><strong>$120</strong><span>60 minutes</span></div><small>Darling Harbour · Kogarah</small><a href="#appointment">Request clinic appointment ↗</a></article>
-              <article><p>Mobile treatment</p><div><small>from</small><strong>$170</strong><span>60 minutes</span></div><small>Across Sydney · subject to availability</small><a href="#appointment">Request mobile appointment ↗</a></article>
+              <article><p>Clinic treatment</p><div><strong>$130</strong><span>60 minutes</span></div><small>Clinic location confirmed when booking</small><a href="#appointment">Request clinic appointment ↗</a></article>
+              <article><p>Mobile treatment</p><div><small>from</small><strong>$200</strong><span>60 minutes</span></div><small>Across Sydney · subject to availability</small><a href="#appointment">Request mobile appointment ↗</a></article>
             </div>
           </div>
         </section>
@@ -166,7 +165,7 @@ export default function HomePage() {
         </section>
 
         <section className="reviews section" id="reviews">
-          <div className="shell review-card"><div><p className="kicker">Client experience</p><strong className="score">5.0</strong><p className="stars">★★★★★</p><small>Based on 62 Google reviews</small></div><blockquote>“Many clients describe leaving with less tension, easier movement and a calmer sense of wellbeing.”<cite>Common themes from client feedback</cite></blockquote></div>
+          <div className="shell review-card"><div><p className="kicker">Client experience</p><strong className="score">5.0</strong><p className="stars">★★★★★</p><small>Verified Google reviews</small></div><blockquote>“Many clients describe leaving with less tension, easier movement and a calmer sense of wellbeing.”<cite>Common themes from client feedback</cite></blockquote></div>
         </section>
 
         <section className="appointment section" id="appointment">
