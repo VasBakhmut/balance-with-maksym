@@ -141,9 +141,8 @@ export default function HomePage() {
 
         <section className="mobile-feature section" id="mobile">
           <div className="shell mobile-panel">
-            <Image src="/images/maksym-new/mobile-therapeutic-massage-sydney.jpg" alt="Maksym providing mobile therapeutic massage in a private Sydney home" fill unoptimized sizes="100vw" />
-            <div className="mobile-overlay" />
-            <div className="mobile-copy"><p className="kicker light">Mobile therapeutic massage</p><h2>Professional care,<br /><em>where you feel at home.</em></h2><p>Mobile appointments are available across Sydney, subject to location and availability. Post-stroke support is primarily offered as a home service.</p><a className="button button-light" href="#appointment">Request a mobile visit</a></div>
+            <div className="mobile-copy"><p className="kicker">Mobile therapeutic massage</p><h2>Professional care,<br /><em>where you feel at home.</em></h2><p>Mobile appointments are available across Sydney, subject to location and availability. Post-stroke support is primarily offered as a home service.</p><a className="button" href="#appointment">Request a mobile visit</a></div>
+            <div className="mobile-visual"><Image src="/images/maksym-new/mobile-therapeutic-massage-sydney.jpg" alt="Maksym providing mobile therapeutic massage in a private Sydney home" fill unoptimized sizes="(max-width: 600px) 100vw, 55vw" /></div>
           </div>
         </section>
 

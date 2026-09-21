@@ -67,3 +67,95 @@ body{background:#fff}
 
 @media(max-width:900px){.hero-image{object-position:76% bottom;transform:scale(1.58);transform-origin:76% bottom}}
 @media(max-width:600px){.hero-image{object-position:73% bottom;transform:scale(1.9);transform-origin:73% bottom}}
+
+/* Keep copy separate from the lettering already present in the mobile-service photograph. */
+.mobile-feature{padding-top:0}
+.mobile-panel{display:grid;grid-template-columns:45% 55%;min-height:560px;background:#f8f5f0}
+.mobile-copy{min-height:560px;max-width:none;padding:clamp(36px,4vw,70px);color:var(--ink)}
+.mobile-copy h2{font-size:clamp(43px,4.5vw,70px)}
+.mobile-copy p:not(.kicker){color:var(--muted)}
+.mobile-copy .button{margin-top:16px}
+.mobile-visual{position:relative;min-width:0;overflow:hidden}
+.mobile-visual img{object-position:72% center}
+
+@media(max-width:900px){
+  .mobile-panel{grid-template-columns:1fr 1fr;min-height:480px}
+  .mobile-copy{min-height:480px;padding:36px}
+  .mobile-copy h2{font-size:clamp(39px,5vw,58px)}
+}
+
+@media(max-width:600px){
+  html{scroll-padding-top:76px}
+  .section{padding-block:58px}
+  .hero{padding-top:8px}
+  .intro{padding-top:68px}
+  .mobile-feature,.reviews{padding-top:0}
+  .ethos{padding-block:58px}
+  .shell{width:calc(100% - 32px)}
+  h2{font-size:clamp(39px,10vw,52px);line-height:1.04}
+  .kicker{margin-bottom:14px}
+  .section-lead{font-size:16px;line-height:1.65}
+  .hero-copy{text-align:center;align-items:center;padding:48px 22px}
+  .hero-copy>p:not(.kicker){margin-inline:auto}
+  .hero-actions{align-items:center;gap:8px;margin-top:12px}
+  .hero-proof{right:12px;left:12px;gap:9px;padding:12px 10px}
+  .hero-proof strong{font-size:24px}
+  .hero-proof span{font-size:8px}
+  .intro h2{margin-bottom:20px}
+  .service-orbits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:calc(100% - 32px);gap:28px 14px;overflow:visible;margin-top:38px;padding:0}
+  .service-orbit{min-width:0;text-align:center}
+  .service-photo,.service-orbit:nth-child(2) .service-photo,.service-orbit:nth-child(3) .service-photo{aspect-ratio:1;margin-bottom:12px}
+  .service-orbit h3{font-size:20px;line-height:1.1}
+  .service-orbit p{margin-bottom:0;font-size:12px;line-height:1.5}
+  .body-focus-heading{margin-bottom:28px;text-align:center}
+  .body-focus-heading h2{margin-inline:auto}
+  .body-focus-grid{display:grid;grid-template-columns:1fr;width:calc(100% - 32px);gap:12px;overflow:visible;padding:0}
+  .body-focus-card,.body-focus-card:last-child{min-width:0;text-align:center}
+  .body-focus-image,.body-focus-card:last-child .body-focus-image{aspect-ratio:16/10}
+  .body-focus-copy{padding:18px 22px 22px}
+  .body-focus-copy h3{font-size:26px}
+  .story-grid,.pricing-layout,.about-grid,.appointment-grid{gap:30px}
+  .story-copy,.split-title,.pricing-layout>div:first-child,.about-copy,.appointment-copy{text-align:center}
+  .story-copy .section-lead,.pricing-layout .section-lead,.appointment-copy>p:not(.kicker){margin-inline:auto}
+  .story-collage{min-height:360px}
+  .photo-tall{right:17%}
+  .photo-small{width:45%;height:40%;border-width:6px}
+  .quiet-steps{margin:25px 0 28px;text-align:left}
+  .quiet-steps li{gap:12px;padding:14px 0}
+  .quiet-steps p{font-size:13px}
+  .ethos-inner{justify-items:center;text-align:center;gap:18px}
+  .ethos blockquote{font-size:clamp(32px,8.4vw,43px)}
+  .concern-ribbon{margin-top:28px}
+  .concern-ribbon div{min-height:95px;padding:16px 10px;text-align:center}
+  .concern-ribbon p{margin:14px 0 0;font-size:16px}
+  .mobile-panel{display:flex;min-height:0;flex-direction:column}
+  .mobile-copy{min-height:0;align-items:center;padding:38px 24px 32px;text-align:center}
+  .mobile-copy h2{font-size:clamp(40px,10vw,53px)}
+  .mobile-copy .button{align-self:center}
+  .mobile-visual{height:auto;aspect-ratio:4/3}
+  .mobile-visual img{object-position:69% center}
+  .price-list article{padding:24px 0;text-align:center}
+  .price-list article>p{margin-bottom:10px}
+  .price-list article>div{justify-content:center}
+  .price-list a{margin-top:12px}
+  .about-image{min-height:360px}
+  .about-copy blockquote{margin:24px auto 0;max-width:360px;padding:0;border:0;font-size:25px}
+  .review-card{gap:22px;padding:34px 22px;text-align:center}
+  .score{font-size:70px}
+  .stars{margin:12px 0 0}
+  .review-card blockquote{font-size:29px}
+  .review-card cite{margin-top:16px}
+  .appointment-form{gap:14px}
+  .booking-note{margin-top:18px}
+  .footer{padding-top:48px}
+  .footer-grid{gap:25px;text-align:center}
+  .footer-grid a{justify-content:center}
+  .footer-bottom{margin-top:30px;text-align:center}
+}
+
+@media(max-width:380px){
+  .service-orbits{gap:24px 10px}
+  .service-orbit h3{font-size:18px}
+  .service-orbit p{font-size:11px}
+  .hero-copy h1{font-size:clamp(44px,13vw,55px)}
+}
