@@ -161,7 +161,7 @@ body{background:#fff}
 }
 
 /* Show more of the portrait on phones while trimming only the ceiling strip. */
-@media(max-width:600px){.about-image{min-height:440px}.about-image img{object-position:center 45%}}
+@media(max-width:600px){.about-image{min-height:0;aspect-ratio:2/3}.about-image img{object-position:center top;transform:scale(1.04);transform-origin:center bottom}}
 
 /* Six treatments remain fully visible at each breakpoint. */
 @media(min-width:901px){
