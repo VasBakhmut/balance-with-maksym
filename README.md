@@ -1,38 +1,31 @@
-# Balance With Maksym Therapeutic Massage
+# Balance With Maksym
 
-Frontend-only website built with Next.js App Router, TypeScript and Tailwind CSS.
+Next.js website for Maksym's therapeutic massage practice in Sydney.
 
-## Local setup
+## Appointment requests
 
-The project has intentionally not been installed, run, built or tested locally.
+The form sends a request to `app/api/appointment/route.ts`. Maksym still confirms the appointment personally. No booking is confirmed by the website.
 
-When you are ready to check it yourself:
+Set these server-side environment variables in Vercel before using the form:
 
-```bash
-npm install
-npm run dev
+```text
+TELEGRAM_BOT_TOKEN=<token from BotFather>
+TELEGRAM_CHAT_ID=<one chat ID or several IDs separated by commas>
 ```
 
-Then open the local URL printed by Next.js.
+Start a conversation with the bot from each private account, then use Telegram's `getUpdates` method to find each chat ID. For multiple recipients, use a value such as `123456789,987654321` in the single `TELEGRAM_CHAT_ID` variable. The server sends the request to each ID. Telegram account access is still controlled by Telegram, not by this list. Keep the token in Vercel environment variables. Do not put it in `NEXT_PUBLIC_*`, commit it to Git, or share it in a screenshot. Redeploy after adding the variables. Submit one test request and confirm that every recipient receives it before announcing the form as available.
 
-## Content editing
+If Telegram is not configured or fails, the form shows an error and the phone number. It never shows a success message for an undelivered request. The client note is optional; the form asks clients not to include sensitive medical information. Review the privacy wording before launch because the form sends contact details and any client note through Telegram.
 
-Business details, services, locations, pricing, FAQs and SEO copy are centralised in:
+## SEO content
 
-`content/site-content.ts`
+Two guides live in `content/guides.ts` and appear in the footer and sitemap. Business details, prices and service names live in `content/site-content.ts`. Review the guides with Maksym before deploying them.
 
-Current clinic locations are placeholders for the confirmed pre-launch locations.
+The current canonical domain is `https://balance-with-maksym.vercel.app`. If the site moves to a custom domain, set `NEXT_PUBLIC_SITE_URL` in Vercel and update the canonical URL in `content/site-content.ts` and the site's Google Business Profile.
 
-## Appointment form
+## Local checks
 
-The form is a frontend demonstration only. It validates fields and shows a success state but does not transmit or store data. The future integration point is marked with a single `TODO` in `components/appointment-form.tsx`.
-
-## Assets still needed
-
-- Authentic portrait of Maksym
-- Treatment session photography
-- Clinic photography
-- Mobile treatment setup photography
-- Approved client review quotations
-- Final domain name
-- Final confirmed clinic locations before launch
+```bash
+npm run lint
+npm run build
+```

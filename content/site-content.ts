@@ -11,7 +11,7 @@ export const siteContent = {
     title: "Therapeutic Massage Sydney | Balance With Maksym",
     description:
       "Personalised therapeutic massage in Sydney for pain relief, recovery and better movement, with clinic appointments and mobile massage across Sydney.",
-    canonical: "https://balancewithmaksym.com.au",
+    canonical: "https://balance-with-maksym.vercel.app",
   },
   social: {
     instagram: "https://www.instagram.com/balancemaksymmassage",

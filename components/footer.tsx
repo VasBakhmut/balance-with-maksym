@@ -1,4 +1,6 @@
 import { siteContent } from "@/content/site-content";
+import { guides } from "@/content/guides";
+import Link from "next/link";
 import { ArrowUpRight, Phone } from "./icons";
 
 export function Footer() {
@@ -20,6 +22,10 @@ export function Footer() {
           <a href={siteContent.social.instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight /></a>
           <a href={siteContent.social.facebook} target="_blank" rel="noreferrer">Facebook <ArrowUpRight /></a>
           <a href={siteContent.social.google} target="_blank" rel="noreferrer">Google reviews <ArrowUpRight /></a>
+        </div>
+        <div>
+          <p className="footer-heading">Helpful guides</p>
+          {guides.map((guide) => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.title} <ArrowUpRight /></Link>)}
         </div>
       </div>
       <div className="shell footer-bottom">

@@ -168,3 +168,25 @@ body{background:#fff}
   .service-orbits{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px}
   .service-orbit:nth-child(even){padding-top:0}
 }
+
+.footer-grid{grid-template-columns:1.2fr 1fr 1fr 1fr;gap:38px}
+.footer-grid>div:last-child a{align-items:flex-start}
+.guide-page{background:#fff;padding:92px 0 110px}
+.guide-shell{max-width:850px}
+.guide-back{display:inline-block;margin-bottom:58px;border-bottom:1px solid var(--ink);font-size:12px}
+.guide-page h1{font-size:clamp(48px,7vw,86px);line-height:1.02}
+.guide-lead{max-width:700px;margin:32px 0 70px;color:var(--muted);font-size:clamp(19px,2.2vw,24px);line-height:1.5}
+.guide-body{max-width:700px}
+.guide-body section{padding:34px 0;border-top:1px solid var(--line)}
+.guide-body h2{margin-bottom:22px;font-size:clamp(31px,3vw,43px);line-height:1.1}
+.guide-body p{color:var(--muted);line-height:1.8}
+.guide-cta{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-top:48px;padding:30px;border:1px solid var(--line)}
+.guide-cta p{margin:0;font-family:var(--font-display);font-size:26px}
+@media(max-width:900px){.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.guide-page{padding:56px 0 70px;text-align:center}.guide-back{margin-bottom:45px}.guide-lead{margin:27px auto 48px}.guide-body section{padding:32px 0}.guide-cta{flex-direction:column}.guide-cta .button{width:100%}}
+
+.header-call{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex:0 0 auto;min-height:42px;padding:0 12px;border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:700;white-space:nowrap}
+.header-call svg{width:17px;height:17px}
+.header-call:hover{border-color:var(--ink)}
+@media(max-width:900px){.header-inner{gap:12px}.header-call{width:42px;height:42px;padding:0;border-radius:50%}.header-call span{display:none}}
+@media(max-width:380px){.header-inner{gap:6px}.brand{gap:5px;min-width:0}.brand img{width:36px}.brand strong{font-size:13px}.brand small{font-size:6px;letter-spacing:.06em}.header-call,.menu-button{width:38px;height:38px}}

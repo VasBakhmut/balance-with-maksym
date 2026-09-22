@@ -16,8 +16,7 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-const deployedHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
-const metadataBase = new URL(deployedHost ? `https://${deployedHost}` : siteContent.seo.canonical);
+const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? siteContent.seo.canonical);
 
 export const metadata: Metadata = {
   metadataBase,

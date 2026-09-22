@@ -10,16 +10,31 @@ export function AppointmentForm() {
   const [type, setType] = useState<AppointmentType>("clinic");
   const [submitted, setSubmitted] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (busy) return;
     setBusy(true);
-    window.setTimeout(() => {
-      setBusy(false);
+    setError("");
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const request = Object.fromEntries(data.entries());
+    try {
+      const response = await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...request, appointmentType: type, consent: data.get("consent") === "on" }),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error(result.error || "Your request could not be sent. Please call Maksym instead.");
       setSubmitted(true);
       document.getElementById("form-status")?.focus();
-    }, 450);
-    // TODO: Connect the appointment request form to the approved backend service.
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Your request could not be sent. Please call Maksym instead.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   if (submitted) {
@@ -36,6 +51,9 @@ export function AppointmentForm() {
 
   return (
     <form className="appointment-form" onSubmit={handleSubmit}>
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px" }}>
+        <label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
+      </div>
       <fieldset className="form-span">
         <legend>Appointment type</legend>
         <div className="segmented-control">
@@ -78,17 +96,18 @@ export function AppointmentForm() {
       </label>
 
       <label className="form-span">What would you like help with?<span aria-hidden="true">*</span>
-        <textarea name="concern" rows={4} required placeholder="A brief description is enough. Please do not include urgent or highly sensitive medical information." />
+        <textarea name="concern" rows={4} maxLength={500} placeholder="Optional. Please do not include urgent or sensitive medical information." />
       </label>
 
       <label className="checkbox form-span">
         <input type="checkbox" name="consent" required />
-        <span>I agree to be contacted by Maksym about this appointment request.</span>
+        <span>I agree to be contacted by Maksym about this appointment request. My details will be sent to him through Telegram.</span>
       </label>
 
       <div className="form-submit form-span">
         <button className="button" type="submit" disabled={busy}>{busy ? "Sending request…" : "Request appointment"}</button>
         <p>Your appointment is confirmed only after Maksym contacts you.</p>
+        {error && <p role="alert">{error} <a href={siteContent.business.phoneHref}>Call {siteContent.business.phoneDisplay}</a></p>}
       </div>
     </form>
   );
