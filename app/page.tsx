@@ -25,12 +25,12 @@ const featuredServiceImages: Record<string, { src: string; alt: string }> = {
     alt: "Maksym providing personalised therapeutic massage in Sydney",
   },
   "Deep Tissue Massage": {
-    src: "/images/maksym-real/deep-tissue-massage-sydney.jpg",
+    src: "/images/maksym-new/sports-recovery-massage-sydney.jpg",
     alt: "Maksym providing focused deep tissue massage treatment in Sydney",
   },
-  "Sports Massage": {
-    src: "/images/maksym-new/sports-recovery-massage-sydney.jpg",
-    alt: "Focused shoulder massage supporting sports recovery in Sydney",
+  "Cupping Therapy": {
+    src: "/images/maksym-new/cupping-therapy-sydney.jpg",
+    alt: "Cupping therapy using suction cups on a client's back in Sydney",
   },
   "Red Light Therapy": {
     src: "/images/maksym-new/red-light-therapy-service-sydney.jpg",
@@ -54,7 +54,7 @@ export default function HomePage() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-frame shell-wide">
-            <Image className="hero-image" src="/images/generated/maksym-therapeutic-massage-hero-v1.png" alt="Personalised therapeutic back massage treatment in Sydney" fill priority loading="eager" sizes="100vw" />
+            <Image className="hero-image" src="/images/generated/maksym-therapeutic-massage-hero-v1.png" alt="Personalised therapeutic back massage treatment in Sydney" fill priority unoptimized sizes="100vw" />
             <div className="hero-shade" />
             <div className="hero-copy">
               <p className="kicker">Therapeutic massage in Sydney</p>

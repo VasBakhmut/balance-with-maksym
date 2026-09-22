@@ -30,8 +30,8 @@ export const siteContent = {
       featured: true,
     },
     {
-      title: "Sports Massage",
-      short: "Support for active bodies before training, after exertion and throughout injury recovery.",
+      title: "Cupping Therapy",
+      short: "A targeted technique using suction cups, offered where appropriate as part of a personalised treatment.",
       featured: true,
     },
     {
