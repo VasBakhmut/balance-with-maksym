@@ -21,7 +21,7 @@ If Telegram is not configured or fails, the form shows an error and the phone nu
 
 Two guides live in `content/guides.ts` and appear in the footer and sitemap. Business details, prices and service names live in `content/site-content.ts`. Review the guides with Maksym before deploying them.
 
-The current canonical domain is `https://balance-with-maksym.vercel.app`. If the site moves to a custom domain, set `NEXT_PUBLIC_SITE_URL` in Vercel and update the canonical URL in `content/site-content.ts` and the site's Google Business Profile.
+The canonical domain is `https://www.balancewithmaksym.com.au`. Set `NEXT_PUBLIC_SITE_URL=https://www.balancewithmaksym.com.au` in Vercel and use the same address in the site's Google Business Profile.
 
 ## Local checks
 
