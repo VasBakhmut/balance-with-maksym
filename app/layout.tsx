@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   metadataBase,
   title: siteContent.seo.title,
   description: siteContent.seo.description,
+  icons: {
+    icon: [
+      {
+        url: "/images/balance-with-maksym-logo-transparent.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/images/balance-with-maksym-logo-transparent.png",
+    apple: "/images/balance-with-maksym-logo-transparent.png",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     title: "Therapeutic Massage in Sydney | Balance With Maksym",
