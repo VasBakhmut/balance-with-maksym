@@ -41,8 +41,8 @@ const featuredServiceImages: Record<string, { src: string; alt: string }> = {
     alt: "Dry needling treatment using fine needles in a targeted muscle area",
   },
   "Mobile Massage": {
-    src: "/images/maksym-new/mobile-therapeutic-massage-sydney.jpg",
-    alt: "A private mobile therapeutic massage appointment in a Sydney home",
+    src: "/images/generated/mobile-massage-home-visit-sydney-v2.png",
+    alt: "A private mobile therapeutic massage home visit in Sydney with portable equipment",
   },
 };
 

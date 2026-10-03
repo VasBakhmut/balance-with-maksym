@@ -160,6 +160,50 @@ body{background:#fff}
   .hero-copy h1{font-size:clamp(44px,13vw,55px)}
 }
 
+/* On phones, let the hero read as a composed introduction rather than a tall background poster. */
+@media(max-width:600px){
+  .hero-frame{
+    display:flex;
+    min-height:0;
+    overflow:hidden;
+    flex-direction:column;
+    background:#fff;
+  }
+  .hero-copy{
+    order:1;
+    min-height:0;
+    padding:38px 20px 30px;
+  }
+  .hero-copy h1{
+    max-width:390px;
+    margin-bottom:20px;
+    font-size:clamp(46px,13.2vw,58px);
+    line-height:.94;
+  }
+  .hero-copy>p:not(.kicker){max-width:350px}
+  .hero-actions{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .hero-image{
+    position:relative!important;
+    order:2;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:3/2;
+    object-fit:cover;
+    object-position:center;
+    transform:none;
+  }
+  .hero-shade{display:none}
+  .hero-proof{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    left:auto;
+    order:3;
+    width:calc(100% - 24px);
+    margin:-24px auto 12px;
+  }
+}
+
 /* Show more of the portrait on phones while trimming only the ceiling strip. */
 @media(max-width:600px){.about-image{min-height:0;aspect-ratio:2/3}.about-image img{object-position:center top;transform:scale(1.04);transform-origin:center bottom}}
 
