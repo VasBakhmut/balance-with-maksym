@@ -160,19 +160,17 @@ body{background:#fff}
   .hero-copy h1{font-size:clamp(44px,13vw,55px)}
 }
 
-/* On phones, let the hero read as a composed introduction rather than a tall background poster. */
+/* Keep the original layered mobile hero, but use a wider crop so the treatment is visible. */
 @media(max-width:600px){
   .hero-frame{
-    display:flex;
-    min-height:0;
+    display:block;
+    min-height:680px;
     overflow:hidden;
-    flex-direction:column;
     background:#fff;
   }
   .hero-copy{
-    order:1;
-    min-height:0;
-    padding:38px 20px 30px;
+    min-height:680px;
+    padding:46px 20px 120px;
   }
   .hero-copy h1{
     max-width:390px;
@@ -183,24 +181,26 @@ body{background:#fff}
   .hero-copy>p:not(.kicker){max-width:350px}
   .hero-actions{flex-direction:row;flex-wrap:wrap;justify-content:center}
   .hero-image{
-    position:relative!important;
-    order:2;
+    position:absolute!important;
     width:100%!important;
-    height:auto!important;
-    aspect-ratio:3/2;
+    height:100%!important;
+    aspect-ratio:auto;
     object-fit:cover;
-    object-position:center;
-    transform:none;
+    object-position:69% center;
+    transform:scale(1.08);
+    transform-origin:69% center;
   }
-  .hero-shade{display:none}
+  .hero-shade{
+    display:block;
+    background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.82) 44%,rgba(255,255,255,.17) 76%,rgba(255,255,255,.03) 100%);
+  }
   .hero-proof{
-    position:relative;
-    right:auto;
-    bottom:auto;
-    left:auto;
-    order:3;
-    width:calc(100% - 24px);
-    margin:-24px auto 12px;
+    position:absolute;
+    right:12px;
+    bottom:14px;
+    left:12px;
+    width:auto;
+    margin:0;
   }
 }
 
