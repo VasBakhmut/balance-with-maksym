@@ -4,7 +4,7 @@ export const siteContent = {
     legalName: "Balance With Maksym Therapeutic Massage",
     phoneDisplay: "0411 918 718",
     phoneHref: "tel:+61411918718",
-    experienceYears: "9+",
+    experienceYears: "7+",
     rating: "5.0",
   },
   seo: {

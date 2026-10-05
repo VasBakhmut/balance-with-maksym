@@ -65,7 +65,7 @@ export default function HomePage() {
                 <a className="text-link" href="#treatments">Explore treatments <span>↗</span></a>
               </div>
             </div>
-            <div className="hero-proof"><strong>9+</strong><span>years of<br />experience</span><i /><strong>5.0</strong><span>Google<br />rating</span></div>
+            <div className="hero-proof"><strong>7+</strong><span>years of<br />experience</span><i /><strong>5.0</strong><span>Google<br />rating</span></div>
           </div>
         </section>
 
@@ -166,7 +166,7 @@ export default function HomePage() {
 
         <section className="about section" id="about">
           <div className="shell about-grid">
-            <div className="about-copy"><p className="kicker">Balance With Maksym</p><h2>Skilled hands.<br /><em>A calm human approach.</em></h2><p>With more than nine years of professional experience, Maksym creates thoughtful treatment plans around each client’s pain, movement and recovery goals.</p><blockquote>“Every treatment is tailored to the person — not just the symptoms.”</blockquote></div>
+            <div className="about-copy"><p className="kicker">Balance With Maksym</p><h2>Skilled hands.<br /><em>A calm human approach.</em></h2><p>With more than seven years of professional experience, Maksym creates thoughtful treatment plans around each client’s pain, movement and recovery goals.</p><blockquote>“Every treatment is tailored to the person — not just the symptoms.”</blockquote></div>
             <div className="about-image"><Image src="/images/maksym-new/maksym-therapeutic-massage-therapist-sydney.jpg" alt="Maksym, an experienced therapeutic massage therapist in Sydney" fill unoptimized sizes="(max-width: 800px) 90vw, 45vw" /></div>
           </div>
         </section>
