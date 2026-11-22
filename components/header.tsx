@@ -10,7 +10,7 @@ export function Header() {
   return <header className="site-header">
     <a className="skip-link" href="#main">Skip to content</a>
     <div className="shell-wide header-inner">
-      <Link className="brand" href="/#top"><Image src="/images/balance-with-maksym-logo-transparent.png" alt="" width={68} height={62} priority /><span><strong>Balance With Maksym</strong><small>Therapeutic Massage · Sydney</small></span></Link>
+      <Link className="brand" href="/" aria-label="Balance With Maksym home"><Image src="/images/balance-with-maksym-logo-transparent.png" alt="" width={68} height={62} priority /><span><strong>Balance With Maksym</strong><small>Therapeutic Massage · Sydney</small></span></Link>
       <nav className="desktop-nav" aria-label="Primary navigation">{headerLinks.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
       <a className="header-call" href={siteContent.business.phoneHref} aria-label={`Call Maksym on ${siteContent.business.phoneDisplay}`}><Phone /><span>{siteContent.business.phoneDisplay}</span></a>
       <Link className="button button-small header-cta" href="/#appointment">Request appointment</Link>
