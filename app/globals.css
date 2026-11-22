@@ -241,6 +241,7 @@ body{background:#fff}
 .breadcrumbs a{border-bottom:1px solid transparent}
 .breadcrumbs a:hover{border-color:currentColor}
 .service-card-link{display:inline-block;margin-top:14px;border-bottom:1px solid var(--line);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.text-link svg,.service-card-link svg,.price-list a svg,.related-services small svg{width:14px;height:14px;flex:0 0 14px;vertical-align:middle}.service-card-link,.price-list a,.related-services small{align-items:center;gap:7px}.service-card-link{display:inline-flex}.price-list a{align-items:center}.related-services small{display:flex}
 .about-more{margin-top:34px}
 
 .service-page{background:#fff}

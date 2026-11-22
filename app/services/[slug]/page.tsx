@@ -5,6 +5,7 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ArrowUpRight } from "@/components/icons";
 import { getServiceBySlug, servicePages } from "@/content/services";
 import { siteContent } from "@/content/site-content";
 
@@ -92,7 +93,7 @@ export default async function ServicePage({ params }: Props) {
                 <div className="service-coming-notice" role="note">
                   <strong>Coming soon</strong>
                   <p>Dry needling is not currently available to book. Please choose one of Maksym&apos;s currently available treatments.</p>
-                  <Link className="text-link" href="/#treatments">View available treatments ↗</Link>
+                  <Link className="text-link" href="/#treatments">View available treatments <ArrowUpRight /></Link>
                 </div>
               ) : (
                 <div className="service-page-actions">
@@ -146,7 +147,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="shell">
             <p className="kicker">Other treatment options</p>
             <div className="related-services">
-              {servicePages.filter((item) => item.slug !== service.slug && !item.comingSoon).slice(0, 3).map((item) => <Link key={item.slug} href={`/services/${item.slug}`}><span>{item.name}</span><small>View treatment ↗</small></Link>)}
+              {servicePages.filter((item) => item.slug !== service.slug && !item.comingSoon).slice(0, 3).map((item) => <Link key={item.slug} href={`/services/${item.slug}`}><span>{item.name}</span><small>View treatment <ArrowUpRight /></small></Link>)}
             </div>
           </div>
         </section>

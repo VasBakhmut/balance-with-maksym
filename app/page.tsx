@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { AppointmentForm } from '@/components/appointment-form'
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
+import { ArrowUpRight } from '@/components/icons'
 import { getServiceByName, servicePages } from '@/content/services'
 import { siteContent } from '@/content/site-content'
 
@@ -141,7 +142,7 @@ export default function HomePage() {
 									Request an appointment
 								</a>
 								<a className='text-link' href='#treatments'>
-									Explore treatments <span>↗</span>
+									Explore treatments <ArrowUpRight />
 								</a>
 							</div>
 						</div>
@@ -204,9 +205,8 @@ export default function HomePage() {
 										className='service-card-link'
 										href={`/services/${servicePage?.slug}`}
 									>
-										{servicePage?.comingSoon
-											? 'View update ↗'
-											: 'View treatment ↗'}
+										{servicePage?.comingSoon ? 'View update' : 'View treatment'}
+										<ArrowUpRight />
 									</Link>
 								</article>
 							)
@@ -462,7 +462,7 @@ export default function HomePage() {
 									<span>60 minutes</span>
 								</div>
 								<small>Clinic location confirmed when booking</small>
-								<a href='#appointment'>Request clinic appointment ↗</a>
+								<a href='#appointment'>Request clinic appointment <ArrowUpRight /></a>
 							</article>
 							<article>
 								<p>Mobile treatment</p>
@@ -472,7 +472,7 @@ export default function HomePage() {
 									<span>60 minutes</span>
 								</div>
 								<small>Across Sydney · subject to availability</small>
-								<a href='#appointment'>Request mobile appointment ↗</a>
+								<a href='#appointment'>Request mobile appointment <ArrowUpRight /></a>
 							</article>
 						</div>
 					</div>
@@ -497,7 +497,7 @@ export default function HomePage() {
 								symptoms.”
 							</blockquote>
 							<Link className='text-link about-more' href='/about'>
-								Meet Maksym ↗
+								Meet Maksym <ArrowUpRight />
 							</Link>
 						</div>
 						<div className='about-image'>

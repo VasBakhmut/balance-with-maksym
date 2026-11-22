@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     images: ["/images/og-balance-with-maksym.png"],
   },
   robots: { index: true, follow: true },
+  other: {
+    bingbot: "index, follow",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
