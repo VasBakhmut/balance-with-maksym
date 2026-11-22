@@ -41,7 +41,7 @@ export const siteContent = {
     },
     {
       title: "Dry Needling",
-      short: "A targeted technique for selected areas of muscle tension, following an individual assessment.",
+      short: "Coming soon. This service is not currently available to book.",
       featured: true,
     },
     {

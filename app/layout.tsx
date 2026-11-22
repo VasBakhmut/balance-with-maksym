@@ -20,17 +20,31 @@ const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? siteContent.seo
 
 export const metadata: Metadata = {
   metadataBase,
-  title: siteContent.seo.title,
+  title: {
+    default: siteContent.seo.title,
+    template: "%s | Balance With Maksym",
+  },
   description: siteContent.seo.description,
+  applicationName: siteContent.business.name,
+  authors: [{ name: "Balance With Maksym", url: "/about" }],
+  creator: siteContent.business.name,
+  publisher: siteContent.business.name,
+  category: "health and wellness",
   icons: {
     icon: [
       {
-        url: "/images/balance-with-maksym-logo-transparent.png",
+        url: "/favicon-48x48.png",
         type: "image/png",
+        sizes: "48x48",
+      },
+      {
+        url: "/icon.png",
+        type: "image/png",
+        sizes: "512x512",
       },
     ],
-    shortcut: "/images/balance-with-maksym-logo-transparent.png",
-    apple: "/images/balance-with-maksym-logo-transparent.png",
+    shortcut: "/favicon-48x48.png",
+    apple: "/icon.png",
   },
   alternates: { canonical: "/" },
   openGraph: {

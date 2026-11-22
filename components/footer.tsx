@@ -1,5 +1,6 @@
 import { siteContent } from "@/content/site-content";
 import { guides } from "@/content/guides";
+import { servicePages } from "@/content/services";
 import Link from "next/link";
 import { ArrowUpRight, Phone } from "./icons";
 
@@ -24,7 +25,12 @@ export function Footer() {
           <a href={siteContent.social.google} target="_blank" rel="noreferrer">Google reviews <ArrowUpRight /></a>
         </div>
         <div>
-          <p className="footer-heading">Helpful guides</p>
+          <p className="footer-heading">Treatments</p>
+          {servicePages.map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.name}{service.comingSoon ? " · Coming soon" : ""} <ArrowUpRight /></Link>)}
+        </div>
+        <div id="guides">
+          <p className="footer-heading">About & guides</p>
+          <Link href="/about">About Maksym <ArrowUpRight /></Link>
           {guides.map((guide) => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.title} <ArrowUpRight /></Link>)}
         </div>
       </div>
