@@ -5,7 +5,7 @@ import { siteContent } from "@/content/site-content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const origin = process.env.NEXT_PUBLIC_SITE_URL ?? siteContent.seo.canonical;
-  const lastModified = new Date("2026-11-18");
+  const lastModified = new Date();
   return [
     { url: origin, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${origin}/about`, lastModified, changeFrequency: "monthly", priority: 0.8 },

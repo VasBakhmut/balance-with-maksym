@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { siteContent } from "@/content/site-content";
@@ -37,7 +36,7 @@ const personJsonLd = {
 export default function AboutPage() {
   return (
     <>
-      <Script id="maksym-person-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
+      <script id="maksym-person-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
       <Header />
       <main id="main" className="about-page">
         <section className="about-page-hero section">

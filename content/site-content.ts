@@ -16,7 +16,7 @@ export const siteContent = {
   social: {
     instagram: "https://www.instagram.com/balancemaksymmassage",
     facebook: "https://www.facebook.com/BalanceWithinRemedialMassage",
-    google: "https://maps.app.goo.gl/TMK832yNe4G2rJUr9?g_st=ic",
+    google: "https://share.google/XhNq4HTZTo00yCQ2E",
   },
   services: [
     {

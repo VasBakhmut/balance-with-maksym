@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -25,7 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.name} Sydney`,
     description: service.description,
-    robots: service.comingSoon ? { index: false, follow: true } : undefined,
+    robots: service.comingSoon
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
       title: `${service.name} Sydney | Balance With Maksym`,
@@ -77,7 +78,7 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
-      <Script id={`service-jsonld-${service.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id={`service-jsonld-${service.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main id="main" className="service-page">
         <section className="service-page-hero">

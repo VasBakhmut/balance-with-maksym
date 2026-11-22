@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Script from 'next/script'
 import { AppointmentForm } from '@/components/appointment-form'
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
@@ -106,7 +105,7 @@ const featuredServiceImages: Record<string, { src: string; alt: string }> = {
 export default function HomePage() {
 	return (
 		<>
-			<Script
+			<script
 				id='business-jsonld'
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -517,7 +516,10 @@ export default function HomePage() {
 							<p className='kicker'>Client experience</p>
 							<strong className='score'>5.0</strong>
 							<p className='stars'>★★★★★</p>
-							<small>Verified Google reviews</small>
+							<a className='review-source' href={siteContent.social.google} target='_blank' rel='noreferrer'>
+								<small>Verified Google reviews</small>
+								<ArrowUpRight />
+							</a>
 						</div>
 						<blockquote>
 							“Many clients describe leaving with less tension, easier movement
