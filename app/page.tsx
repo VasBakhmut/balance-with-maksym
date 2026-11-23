@@ -363,7 +363,7 @@ export default function HomePage() {
 					<div className='shell ethos-inner'>
 						<Image
 							src='/images/balance-with-maksym-logo-transparent.png'
-							alt=''
+							alt='Balance With Maksym logo'
 							width={150}
 							height={135}
 						/>
